@@ -1,0 +1,29 @@
+Background:
+Minard produced a map of Napoleon’s March to Russia in 1812. In his map, Minard showed how the French army advanced and retreated to and
+from Moscow (then Moscou), Russia. The retreat-to-every-advance was a tactic which was adapted by Czar of Russia as Napoleon’s troop
+marched towards Russia. The Russians retreated with the French army in October. Napoleon had to retreat his army after reaching Moscow 
+as the temperature dropped severely due to winter. This was accompanied by the suffering of his troops who lacked food, suffered 
+Zymotic diseases, Wounds and Injuries. Ultimately, Napoleon had to return to France.
+
+Previously, the following has been visualized:
+•	Variation of temperature from October to December
+•	Advance of Napoleon’s troops from France to Russia [visualized in yellow]
+•	Retreat of Napoleon’s troops from Russia [visualized in brown]
+
+The visualization has been explained below:
+Language/Tool used: R/ RStudio
+Libraries used: ggplot2, ggmap, ggrepel, tidyverse, gridExtra, reshape2, HistData, scales
+The data has been visualization through the following methods:
+1.	Data collection: Actual historical data has been retrieved from HistData library viz. Minard.troops, Minard.cities, Minard.temp
+2.	Plot for troops and cities:
+•	Specified European region has been visualized in the background with the help of ggmap library
+•	The plot for direction type (A or R) has been visualized along with survivors’ size
+•	Using geom_point, the cities were plotted on the visualization
+•	To maintain aesthetics, specific hex codes were used for colours 
+3.	Plot for temperature:
+•	Using ggplot for Minard.temp , visualization was generated
+•	Size was adjusted accordingly and the visualization was labelled
+•	Specific co-ordinate system was set using coord_cartesian
+4.	Combination of the two plots:
+•	Using rbind, two plots were combined
+•	Aspect ratio of 2:1 was set
